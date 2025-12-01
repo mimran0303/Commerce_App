@@ -1,0 +1,21 @@
+﻿@page "/learnBlazor/bindprop" 
+@rendermode InteractiveServer //solution for making bind work (update the price product, line 10) //line 8 : is it active? if so states active or else (":") state inactive
+
+<h3>BindProp - Data Binding</h3> 
+
+Name : @Product.Name <br />
+IsActive : @Product.IsActive<br />
+This Product is : @(Product.IsActive ? "Active" : "InActive")<br />
+Price : @Product.Price <br />
+Input Price:<input type="number" @bind="Product.Price" @bind:event="oninput"/>
+
+
+@code {
+    Model.Product Product = new()
+    {
+        Id = 1,
+        Name = "Product 1",
+        IsActive = true, 
+        Price = 5
+    };
+}
