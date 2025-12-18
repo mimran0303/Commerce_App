@@ -8,7 +8,6 @@ namespace OrderTracker.Model
         public string Key { get; set; }
         public double Price { get; set; }
         public string Value { get; set; }
-        public IEnumerable<Product_Prop> ProductProperties { get; set; }
 
     }
 }
